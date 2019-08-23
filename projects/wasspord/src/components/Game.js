@@ -4,6 +4,9 @@ import { PlayersForm } from './PlayersForm.js';
 import { TurnDisplay } from './TurnDisplay.js';
 import { Welcome } from './Welcome.js';
 
+export const generateListKey = () =>
+  Math.floor(Math.random() * new Date().getTime());
+
 const GameState = Object.freeze({
   WELCOME: 1,
   ADD_PLAYERS: 2,

@@ -1,7 +1,6 @@
 import { html } from '../unpkg/htm.js';
 import { React } from '../unpkg/react.js';
-
-const generateListKey = () => new Date().getTime();
+import { generateListKey } from './Game.js';
 
 export const PlayersForm = ({ players, startGame }) => {
   const [inputKeys, setInputKeys] = React.useState([
