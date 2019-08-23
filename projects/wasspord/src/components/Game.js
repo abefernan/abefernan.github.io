@@ -1,6 +1,7 @@
 import { html } from '../unpkg/htm.js';
 import { React } from '../unpkg/react.js';
 import { PlayersForm } from './PlayersForm.js';
+import { Results } from './Results.js';
 import { TurnDisplay } from './TurnDisplay.js';
 import { Welcome } from './Welcome.js';
 
@@ -62,7 +63,7 @@ export const Game = () => {
         `}
       ${state === GameState.SHOW_RESULTS &&
         html`
-          <h1>results</h1>
+          <${Results} scores=${scores} playAgain=${goToPlayersForm} />
         `}
     </${React.Fragment}>
   `;
