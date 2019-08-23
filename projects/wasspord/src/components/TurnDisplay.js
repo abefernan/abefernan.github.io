@@ -26,15 +26,12 @@ export const TurnDisplay = ({ players, scores, endGame }) => {
   };
 
   const nextTurn = () => {
-    // TODO introducir score de hinter
-    scores.push([hinter, score]);
-    // TODO introducir score de guesser
-    scores.push([guesser, score]);
+    scores.set(hinter, scores.get(hinter) + parseInt(score, 10));
+    scores.set(guesser, scores.get(guesser) + parseInt(score, 10));
 
-    // TODO comprobar si gano alguien
-    // endGame();
-
-    cycleTurns();
+    const winner = Array.from(scores.values()).some(score => score >= 20);
+    if (winner) endGame();
+    else cycleTurns();
   };
 
   return html`
