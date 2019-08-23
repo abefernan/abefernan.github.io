@@ -11,17 +11,27 @@ const GameState = Object.freeze({
   SHOW_RESULTS: 4
 });
 
-const players = [];
-const scores = [];
+let players;
+let scores;
+
+const initScores = players => {
+  scores = new Map();
+
+  for (const player of players) {
+    scores.set(player, 0);
+  }
+};
 
 export const Game = () => {
   const [state, setState] = React.useState(GameState.WELCOME);
 
   const goToPlayersForm = () => {
+    players = [];
     setState(GameState.ADD_PLAYERS);
   };
 
   const goToPlayGame = () => {
+    initScores(players);
     setState(GameState.PLAY_GAME);
   };
 
