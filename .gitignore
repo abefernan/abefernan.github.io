@@ -1,7 +1,1 @@
-.cache/
-coverage/
-.DS_Store
-.env
 node_modules
-.parcel-cache/
-.vscode/

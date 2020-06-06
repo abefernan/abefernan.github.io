@@ -1,7 +1,6 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:import/errors",
     "plugin:react/recommended", // Uses the recommended rules from @eslint-plugin-react
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended", // Uses the recommended rules from the @typescript-eslint/eslint-plugin
@@ -40,18 +39,13 @@
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "import", "jsx-a11y", "react", "react-hooks"],
+  "plugins": ["@typescript-eslint", "jsx-a11y", "react", "react-hooks"],
   "env": {
     "es6": true,
     "browser": true,
     "node": true
   },
   "settings": {
-    "import/resolver": {
-      "parcel": {
-        "extensions": [".ts", ".tsx"]
-      }
-    },
     "react": {
       "version": "detect"
     }

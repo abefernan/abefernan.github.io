@@ -1,11 +1,21 @@
 {
-  "include": ["src"],
+  "include": ["src", "types"],
+  "exclude": ["node_modules"],
+  "extends": "@snowpack/app-scripts-react/tsconfig.base.json",
   "compilerOptions": {
+    // You can't currently define paths in your 'extends' config,
+    // so we have to set 'baseUrl' & 'paths' here.
+    // Don't change these unless you know what you're doing.
+    // See: https://github.com/microsoft/TypeScript/issues/25430
+    "baseUrl": "./",
+    "paths": { "*": ["web_modules/.types/*"] },
+    // Feel free to add/edit new config options below:
+    // ...
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "module": "es2020",
+    "module": "esnext",
     "moduleResolution": "node",
     "newLine": "LF",
     "noEmitOnError": true,
@@ -23,7 +33,6 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictBindCallApply": true,
-    "target": "es2020",
-    "typeRoots": ["./node_modules/@types", "src/custom_types.d.ts"]
+    "target": "es2020"
   }
 }
