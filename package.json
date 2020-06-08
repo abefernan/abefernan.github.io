@@ -27,8 +27,12 @@
   },
   "snowpack": {
     "extends": "@snowpack/app-scripts-react",
+    "plugins": [
+      "@snowpack/plugin-webpack"
+    ],
     "scripts": {
-      "build:css": "postcss"
+      "build:css": "postcss",
+      "bundle:*": "@snowpack/plugin-webpack"
     }
   },
   "dependencies": {
@@ -37,6 +41,7 @@
   },
   "devDependencies": {
     "@snowpack/app-scripts-react": "^1.1.4",
+    "@snowpack/plugin-webpack": "^1.1.0",
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.2.1",
     "@types/react": "^16.9.35",
@@ -63,7 +68,7 @@
   "scripts": {
     "dev": "snowpack dev",
     "build": "snowpack build",
-    "postbuild": "cp build/index.html index.html && sed -i 's/\\/_dist_/build\\/_dist_/g' index.html",
+    "postbuild": "cp build/index.html index.html && sed -i 's/\\/css/build\\/css/g' index.html && sed -i 's/\\/js/build\\/js/g' index.html",
     "test": "jest",
     "format": "prettier --write \"src/**/*.{html,css,ts,tsx}\"",
     "lint": "stylelint \"src/**/*.css\" || eslint \"src/**/*.{ts,tsx}\""
