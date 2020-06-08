@@ -25,6 +25,12 @@
     "tabWidth": 2,
     "trailingComma": "all"
   },
+  "snowpack": {
+    "extends": "@snowpack/app-scripts-react",
+    "scripts": {
+      "build:css": "postcss"
+    }
+  },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
