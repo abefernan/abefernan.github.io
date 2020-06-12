@@ -1,17 +1,20 @@
 import React from 'react';
 import './App.css';
-import logo from './assets/logo.svg';
+import davidBust from './assets/davidBust.png';
 
 function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
+        <img src={davidBust} className="App-logo" alt="Panda Emoji" />
+        <p>Check out my game:</p>
+        <a
+          className="App-link"
+          href="https://abefernan.github.io/projects/wasspord/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WassPord
         </a>
       </header>
     </div>
