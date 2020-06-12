@@ -6,7 +6,7 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={davidBust} className="App-logo" alt="Panda Emoji" />
+        <img src={davidBust} className="App-logo" alt="David Bust" />
         <p>Check out my game:</p>
         <a
           className="App-link"
