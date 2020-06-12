@@ -11,11 +11,13 @@
     "last 2 Firefox versions",
     "last 2 FirefoxAndroid versions"
   ],
+  "babel": {
+    "extends": "@snowpack/app-scripts-react/babel.config.json"
+  },
   "postcss": {
     "plugins": {
       "stylelint": true,
-      "autoprefixer": true,
-      "cssnano": true
+      "autoprefixer": true
     }
   },
   "prettier": {
@@ -35,21 +37,26 @@
       "bundle:*": "@snowpack/plugin-webpack"
     }
   },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ]
+  },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@snowpack/app-scripts-react": "^1.1.4",
-    "@snowpack/plugin-webpack": "^1.1.0",
-    "@testing-library/jest-dom": "^5.9.0",
+    "@snowpack/plugin-webpack": "^1.1.5",
+    "@testing-library/jest-dom": "^5.10.0",
     "@testing-library/react": "^10.2.1",
-    "@types/react": "^16.9.35",
+    "@types/react": "^16.9.36",
     "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^3.1.0",
-    "@typescript-eslint/parser": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
     "autoprefixer": "^9.8.0",
-    "cssnano": "^4.1.10",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -59,7 +66,7 @@
     "jest": "^26.0.1",
     "postcss-cli": "^7.1.1",
     "prettier": "^2.0.5",
-    "snowpack": "^2.3.1",
+    "snowpack": "^2.4.0",
     "stylelint": "^13.6.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
@@ -71,6 +78,6 @@
     "postbuild": "cp build/index.html index.html && sed -i 's/\\/css/build\\/css/g' index.html && sed -i 's/\\/js/build\\/js/g' index.html",
     "test": "jest",
     "format": "prettier --write \"src/**/*.{html,css,ts,tsx}\"",
-    "lint": "stylelint \"src/**/*.css\" || eslint \"src/**/*.{ts,tsx}\""
+    "lint": "stylelint \"src/**/*.css\" && eslint \"src/**/*.{ts,tsx}\""
   }
 }
