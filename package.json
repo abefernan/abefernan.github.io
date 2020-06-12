@@ -75,6 +75,7 @@
   "scripts": {
     "dev": "snowpack dev",
     "build": "snowpack build",
+    "postbuild": "sed -i 's/\\/css/css/g' build/index.html && sed -i 's/\\/js/js/g' build/index.html",
     "test": "jest",
     "format": "prettier --write \"src/**/*.{html,css,ts,tsx}\"",
     "lint": "stylelint \"src/**/*.css\" && eslint \"src/**/*.{ts,tsx}\""
