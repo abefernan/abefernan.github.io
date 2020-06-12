@@ -4,7 +4,7 @@
   "author": "Abel Fernández <abel.fernandez.nandin@gmail.com>",
   "repository": "github:abefernan/abefernan.github.io",
   "description": "abefernan's personal site",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 ChromeAndroid versions",
