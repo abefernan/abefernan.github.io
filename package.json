@@ -64,6 +64,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "jest": "^26.0.1",
+    "modern-css-reset": "^1.1.0",
     "postcss-cli": "^7.1.1",
     "prettier": "^2.0.5",
     "snowpack": "^2.4.0",
