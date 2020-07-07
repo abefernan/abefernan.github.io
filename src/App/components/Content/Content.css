@@ -5,18 +5,31 @@
 
 .Content > section {
   max-width: 80ch;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Content > section + section {
   margin-block-start: var(--s3);
 }
 
-.Content :is(h2, h3) {
+.Content h2 {
   color: #ffcb74;
 }
 
-.Content :is(h2, h3)::selection {
+.Content h2::selection {
+  color: #4f8a8b;
+  background: #ffcb74;
+}
+
+.Content h3 {
+  color: #ffcb74;
+  display: flex;
+  align-items: center;
+  gap: var(--s-1);
+}
+
+.Content h3::selection {
   color: #4f8a8b;
   background: #ffcb74;
 }
@@ -30,15 +43,18 @@
   margin-block-start: var(--s1);
 }
 
-.Content :is(p, em)::selection {
+.Content p::selection {
   color: #4f8a8b;
   background: #f4f6ff;
 }
 
-.Content h3 {
-  display: block flex;
-  align-items: center;
-  gap: var(--s-1);
+.Content em::selection {
+  color: #4f8a8b;
+  background: #f4f6ff;
+}
+
+.Content span::selection {
+  background: #f4f6ff;
 }
 
 .Content h3 > span {
@@ -54,13 +70,18 @@
   color: #f4f6ff;
 }
 
+.Content .tech-list li::selection {
+  color: #4f8a8b;
+  background: #f4f6ff;
+}
+
 .Content .tech-list li::before {
   content: '+ ';
 }
 
 .Content .works {
   margin-block-start: var(--s1);
-  display: block grid;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(calc(25ch), 1fr));
   gap: 1rem;
 }

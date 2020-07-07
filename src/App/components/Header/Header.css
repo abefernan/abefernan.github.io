@@ -1,6 +1,7 @@
 .Header {
   background-color: #ea907a;
-  padding: var(--s0);
+  padding: var(--s1);
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   gap: var(--s3);
@@ -38,11 +39,11 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s1);
 }
 
 .Header nav li {
   font-size: var(--s2);
+  margin-left: var(--s1);
 }
 
 .Header nav svg {
