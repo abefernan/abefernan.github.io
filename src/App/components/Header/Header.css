@@ -1,0 +1,51 @@
+.Header {
+  background-color: #ea907a;
+  padding: var(--s0);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+  justify-content: space-between;
+}
+
+.Header h1 {
+  font-size: var(--s2);
+  display: inline;
+  white-space: nowrap;
+}
+
+.Header h1::selection {
+  color: #ea907a;
+  background: #f4f6ff;
+}
+
+.Header a {
+  color: #f4f6ff;
+  white-space: nowrap;
+}
+
+.Header a[href='/'] {
+  text-decoration: none;
+}
+
+.Header a::selection {
+  color: #ea907a;
+  background: #f4f6ff;
+}
+
+.Header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.Header nav li {
+  font-size: var(--s2);
+}
+
+.Header nav svg {
+  font-size: 0.8em;
+  margin-inline-end: var(--s-3);
+}
