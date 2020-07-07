@@ -56,7 +56,7 @@ function Content(): JSX.Element {
           <li>React with Hooks</li>
           <li>Redux with Hooks</li>
           <li>CSS, PostCSS, Flexbox, Grid</li>
-          <li>Material UI Core</li>
+          <li>Material-UI</li>
           <li>Docker with Compose</li>
         </ul>
         <h3>
