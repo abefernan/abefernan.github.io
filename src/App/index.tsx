@@ -1,6 +1,8 @@
 import React from 'react';
-import Content from './components/Content';
-import Header from './components/Header';
+import { Content } from './components/Content';
+import { Header } from './components/Header';
+
+export { App };
 
 function App(): JSX.Element {
   return (
@@ -10,5 +12,3 @@ function App(): JSX.Element {
     </>
   );
 }
-
-export default App;
