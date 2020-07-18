@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import App from '.';
+import { App } from '.';
 
-test('renders check game link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/check out my game/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders page title', async () => {
+  const { findAllByText } = render(<App />);
+  const [h1Element] = await findAllByText(/@abefernan/i);
+  expect(h1Element.tagName).toBe('H1');
 });
