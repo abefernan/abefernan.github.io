@@ -1,52 +1,53 @@
 .Header {
-  background-color: #ea907a;
-  padding: var(--s1);
-  padding-left: 0;
+  padding: var(--s1) var(--s1) var(--s1) 0;
+  background: var(--color-bg-2);
   display: flex;
   flex-wrap: wrap;
-  gap: var(--s3);
   justify-content: space-between;
-}
 
-.Header h1 {
-  font-size: var(--s2);
-  display: inline;
-  white-space: nowrap;
-}
+  & h1 {
+    display: inline;
+    white-space: nowrap;
+  }
 
-.Header h1::selection {
-  color: #ea907a;
-  background: #f4f6ff;
-}
+  & h1::selection {
+    color: var(--color-bg-2);
+    background: var(--color-title-2);
+  }
 
-.Header a {
-  color: #f4f6ff;
-  white-space: nowrap;
-}
+  & a {
+    color: var(--color-title-2);
+    white-space: nowrap;
+  }
 
-.Header a[href='/'] {
-  text-decoration: none;
-}
+  & a[href='/'] {
+    text-decoration: none;
+  }
 
-.Header a::selection {
-  color: #ea907a;
-  background: #f4f6ff;
-}
+  & a::selection {
+    color: var(--color-bg-2);
+    background: var(--color-title-2);
+  }
 
-.Header nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
+  & nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.Header nav li {
-  font-size: var(--s2);
-  margin-left: var(--s1);
-}
+  & nav ul > * {
+    margin-left: var(--s1);
+  }
 
-.Header nav svg {
-  font-size: 0.8em;
-  margin-inline-end: var(--s-3);
+  & nav li {
+    font-size: var(--s2);
+    font-size: clamp(var(--s-5), var(--s1) + 1vw, var(--s2));
+  }
+
+  & nav svg {
+    margin-inline-end: var(--s-3);
+    font-size: 0.8em;
+  }
 }

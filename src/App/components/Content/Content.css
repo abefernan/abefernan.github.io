@@ -1,105 +1,60 @@
-.Content {
-  background-color: #4f8a8b;
+.content {
   padding: var(--s0);
-}
+  background: var(--color-bg-1);
 
-.Content > section {
-  max-width: 80ch;
-  margin-left: auto;
-  margin-right: auto;
-}
+  & section {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    max-width: 80ch;
+  }
 
-.Content > section + section {
-  margin-block-start: var(--s3);
-}
+  & section + section {
+    margin-block-start: var(--s3);
+  }
 
-.Content h2 {
-  color: #ffcb74;
-}
+  & :any(h2, h3) {
+    color: var(--color-title-1);
+  }
 
-.Content h2::selection {
-  color: #4f8a8b;
-  background: #ffcb74;
-}
+  & h2::selection {
+    color: var(--color-bg-1);
+    background: var(--color-title-1);
+  }
 
-.Content h3 {
-  color: #ffcb74;
-  display: flex;
-  align-items: center;
-  gap: var(--s-1);
-}
+  & h3 {
+    display: flex;
+    align-items: center;
+  }
 
-.Content h3::selection {
-  color: #4f8a8b;
-  background: #ffcb74;
-}
+  & h3::selection {
+    color: var(--color-bg-1);
+    background: var(--color-title-1);
+  }
 
-.Content p {
-  color: #f4f6ff;
-  font-size: var(--s1);
-}
+  & h3 span {
+    margin-inline-end: var(--s-1);
+    font-size: 0.8em;
+  }
 
-.Content p + p {
-  margin-block-start: var(--s1);
-}
+  & p + p {
+    margin-block-start: var(--s1);
+  }
 
-.Content p::selection {
-  color: #4f8a8b;
-  background: #f4f6ff;
-}
+  & p::selection {
+    color: var(--color-bg-1);
+    background: var(--color-text);
+  }
 
-.Content em::selection {
-  color: #4f8a8b;
-  background: #f4f6ff;
-}
+  & span::selection {
+    background: var(--color-text);
+  }
 
-.Content span::selection {
-  background: #f4f6ff;
-}
+  & em::selection {
+    color: var(--color-bg-1);
+    background: var(--color-text);
+  }
 
-.Content h3 > span {
-  font-size: 0.8em;
-}
-
-.Content .tech-list {
-  list-style-type: none;
-}
-
-.Content .tech-list li {
-  font-size: var(--s1);
-  color: #f4f6ff;
-}
-
-.Content .tech-list li::selection {
-  color: #4f8a8b;
-  background: #f4f6ff;
-}
-
-.Content .tech-list li::before {
-  content: '+ ';
-}
-
-.Content .works {
-  margin-block-start: var(--s1);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(calc(25ch), 1fr));
-  gap: 1rem;
-}
-
-.Content .works a {
-  text-decoration: none;
-  border: 0.15rem solid #f4f6ff;
-}
-
-.Content .works a:hover {
-  transform: translate(0, calc(var(--s-3) * -1));
-}
-
-.Content .works li {
-  padding: 1rem;
-}
-
-.Content .works h3 {
-  font-weight: 600;
-  font-size: var(--s1);
+  & .work-list {
+    margin-block-start: var(--s1);
+  }
 }

@@ -1,4 +1,6 @@
 :root {
+  scroll-behavior: smooth;
+
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -13,43 +15,33 @@
   --s5: calc(var(--s4) * var(--ratio));
 
   font-family: 'Muli', sans-serif;
+  color: var(--color-text);
 }
 
+p,
 h1,
 h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h3 {
   max-width: 60ch;
 }
 
+p {
+  font-family: 'Lora', serif;
+  font-size: var(--s1);
+  font-size: clamp(var(--s-5), var(--s0) + 1vw, var(--s1));
+}
+
 h1 {
-  font-size: var(--s5);
+  font-size: var(--s2);
+  font-size: clamp(var(--s-5), var(--s1) + 1vw, var(--s2));
 }
 
 h2 {
   font-size: var(--s4);
+  font-size: clamp(var(--s-5), var(--s3) + 1vw, var(--s4));
 }
 
 h3 {
   font-size: var(--s3);
-}
-
-h4 {
-  font-size: var(--s2);
-}
-
-h5 {
-  font-size: var(--s1);
-}
-
-h6 {
-  font-size: var(--s0);
-}
-
-p {
-  font-size: var(--s0);
-  font-family: 'Lora', serif;
+  font-size: clamp(var(--s-5), var(--s2) + 1vw, var(--s3));
 }
