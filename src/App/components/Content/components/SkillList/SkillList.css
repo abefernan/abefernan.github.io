@@ -1,0 +1,15 @@
+.skill-list {
+  & li {
+    font-size: var(--s1);
+    font-size: clamp(var(--s-5), var(--s0) + 1vw, var(--s1));
+  }
+
+  & li::before {
+    content: '+ ';
+  }
+
+  & li::selection {
+    color: var(--color-bg-1);
+    background: var(--color-text);
+  }
+}

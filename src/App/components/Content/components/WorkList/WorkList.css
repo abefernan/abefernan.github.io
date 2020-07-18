@@ -1,0 +1,28 @@
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--s0);
+
+  & a {
+    text-decoration: none;
+    border: 2px solid var(--color-text);
+  }
+
+  & a:hover {
+    transform: translate(0, calc(var(--s-3) * -1));
+  }
+
+  & li {
+    padding: var(--s0);
+  }
+
+  & h3 {
+    font-weight: 600;
+    font-size: var(--s1);
+    font-size: clamp(var(--s-5), var(--s0) + 1vw, var(--s1));
+  }
+
+  & p {
+    color: var(--color-text);
+  }
+}
